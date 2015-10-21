@@ -1,33 +1,25 @@
-/* global define */
+define(['jquery', 'backbone', 'marionette', 'underscore', 'handlebars'],
+function ($, Backbone, Marionette, _, Handlebars) {
+    var App = new Backbone.Marionette.Application();
 
-define([
-    'backbone',
-	'marionette',
-//    'regions/notification',
-//    'regions/dialog', 
-	'collections/Nav',
-//	'views/MenuView',
-//	'views/Footer'
-], function (Backbone, Marionette, Nav){ //, NotifyRegion, DialogRegion, Nav, MenuView, Footer
-	'use strict';
-
-	var app=new Marionette.Application();
-	
-	app.pages = new Nav([
-        {title: 'Home', name: 'home', active: true},
-        //{title: 'Events', name: 'events'},
-        {title: 'Schedule', name: 'schedule'},
-        {title: 'Sponsors', name: 'sponsors'},
-        {title: 'Volunteers', name: 'volunteers'},
-        {title: 'About Us', name: 'about'},
-        {title: 'Contact Us', name: 'contact'},
-        //{title: 'Login', name: 'login'},
-    ]);
-
-	//return window.app = app;
-    app.on('start',function(){
-        Backbone.history.start();
-        //console.write("test test 1");
+    //Organize Application into regions corresponding to DOM elements
+    //Regions can contain views, Layouts, or subregions nested as necessary
+    App.addRegions({
+        headerRegion:"#main-nav",
+        mainRegion:"#main",
+        footerRegion:"#footer"
     });
-});
 
+    function isMobile() {
+        var ua = (navigator.userAgent || navigator.vendor || window.opera, window, window.document);
+        return (/iPhone|iPod|iPad|Android|BlackBerry|Opera Mini|IEMobile/).test(ua);
+    }
+
+    App.mobile = isMobile();
+
+    App.addInitializer(function (options) {
+        Backbone.history.start();
+    });
+
+    return App;
+});
