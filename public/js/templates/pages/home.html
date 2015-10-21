@@ -1,0 +1,64 @@
+<script type="application/javascript">
+    var showme=$('#facebook-source').html();
+    $('#face').html(showme);
+</script>
+
+
+<script src="/lib/zabuto_calendar.min.js"></script>
+<!-- start calendar header code-->
+<script type="application/javascript">
+    var eventData=[
+      { "date":"2015-10-07", "badge":true, "label":"Practice", "title":"Practice", "body":"<p class=\"lead\">Practice<\/p>", "footer":"At Paisley Park", "classname":"purple-event" },
+      { "date":"2015-10-14", "badge":true, "title":"Tuition", "body":"<p class=\"lead\">Tuition Due<\/p>", "footer":"At Paisley Park", "classname":"tuition" },
+      { "date":"2015-10-21", "badge":true, "title":"Practice", "body":"<p class=\"lead\">Practice<\/p>", "footer":"At Paisley Park", "classname":"purple-event" },    
+      { "date":"2015-10-28", "badge":true, "title":"Practice", "body":"<p class=\"lead\">Practice<\/p>", "footer":"At Paisley Park", "classname":"purple-event" }
+    ];
+    var legendData=[ 
+      {type: "text", label: "Practice", badge: "P"}, 
+      {type: "block", label: "Tuition", badge: "T", classname: "tuition"}, 
+      {type: "block", label: "Performance", badge: "S", classname: "showtime"},
+      {type: "spacer"} 
+    ];
+    
+    $(document).ready(function () {
+        $("#my-calendar").zabuto_calendar({
+          language: "en", today: true, data: eventData, legend: legendData 
+        });
+        
+        if(document.URL.indexOf("#")==-1){
+          url=document.URL+"#";location="#";location.reload(true);
+        }
+    });
+</script>
+  
+<div class="container">
+  <img src="/images/baby_simba__rebirth_by_cherrichelxd16-d60e661.jpg" alt="picture of baby simba" width="140" align="left"/>
+  <h1>
+    This year we will be performing Disney's The Lion King!&trade;<br />
+    <small>
+      Westchase Community Theatre is a Children Theatre Production Company. We accept children between ages 6-16. Our performances are generally in May.    
+    </small>
+  </h1>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <h4>Westchase Theatre on Facebook&trade;</h4>
+    <!--  class="fb-page" data-href="https://www.facebook.com/WestchaseTheatre" data-small-header="false" data-width="340" data-height="350" data-hide-cover="false" data-show-facepile="true" data-show-posts="true" -->
+    <div id="face" class="fb-page" data-href="https://www.facebook.com/WestchaseTheatre" data-small-header="false" data-width="340" data-height="350" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"></div>
+  </div>
+  <div class="col-sm-6">
+    <h4>Calendar of Events</h4>
+    <div id="my-calendar" style="width: 300px"></div>
+  </div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5686239-7', 'auto');
+  ga('send', 'pageview');
+
+</script>
