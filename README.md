@@ -1,14 +1,23 @@
-EtherCore
----------
+Squealing-Broccoli
+------------------
 
-What is EtherCore?  It is a MEAN framework that replaces DIFR.
-It uses Express version 4.x
+What is Squealing Broccoli?  It is not the repository you are looking for.
 
-How to get EtherCore
---------------------
+Basically, I'm turing through different boilerplates and messing around trying to get what I want to work which 
+will hopefully be:
+
+A boilerplate that uses Bootstrap 3.x, Express 4.x, Latest Backbone, Marionette, RequireJS, etc... you know, not 
+a three year old place to start...
+
+It uses the stuff shown in bower.json and package.json respectively.
+Public is client, server.js and other folders are for server-side using mongodb.
+
+How to get Squealing Broccoli
+-----------------------------
+Not sure why you wouldn't just visit your local grocery store but, if you must...
 ```
-git clone https://github.com/bciv/EtherCore.git
-cd EtherCore
+git clone https://github.com/bciv/squealing-broccoli.git
+cd squealing-broccoli
 ```
 
 Install in Virtual Box using Vagrant
@@ -48,6 +57,6 @@ Install MongoDB
 
 =Client Side
 
-public/js/template.js defines what would be static pages
-public/js/app.js defines what would be in the nav
+public/js/template.js defines what would be static pages (not yet...)
+public/js/app.js defines what would be in the nav (also a blatant lie...)
 
