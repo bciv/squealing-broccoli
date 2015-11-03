@@ -1,15 +1,12 @@
 {
-	"name": "squealing-broccoli",
-	"description": "Broccoli Fullstack",
-	"main": "server.js",
-	"version": "0.0.1",
-	"scripts": {
-		"start": "node server.js"
-	},
-	"dependencies": {
-		"express": "~4.0.0",
-		"mongoose": "~3.6.13",
-		"body-parser": "~1.0.1",
-		"MD5": "~1.2.1"
-	}
+    "name": "my-social-network",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+      "express": "~3.0.0",
+      "jade": ">= 0.0.1",
+      "mongoose": ">= 2.6.5",
+      "nodemailer": "0.3.20",
+      "connect": ">= 1.9.1"
+  }
 }
