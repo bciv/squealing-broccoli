@@ -1,4 +1,4 @@
-doctype
+doctype html
 html(lang="en")
   head
     meta(charset="utf-8")
@@ -9,14 +9,17 @@ html(lang="en")
     meta(name='author',content='')
     title Squealing Broccoli
     link(rel='stylesheet', type='text/css', href='/css/bootstrap.css')
-    link(rel='stylesheet',href='/styles/styles.css')
+    link(rel='stylesheet', type='text/css', href='/css/styles.css')
+    script(data-main='js/boot', type='text/javascript',src='/js/libs/require.js')
+    
   body
-    nav
-      span#menu-nav
-  
+
+    block nav 
+      
     block content
     
     block scripts
     
   footer
-    div#footer
+  
+    block footer

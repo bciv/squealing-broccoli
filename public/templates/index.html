@@ -11,13 +11,18 @@
     <div class="collapse navbar-collapse" id="myNavbar">
         <span id="main-nav"></span>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+        <li><p><%=name.first %> <%= name.last %></p></li>
+        <li><a href="#contacts/me"><span class="glyphicon glyphicon-book"></span> Contacts</a></li>
+        <li><a href="#profile/me"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+        <li><a href="#logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+<div class="container">
+  
 <h1>My Social Network</h1>
 
 <h2>Activity Stream</h2>
@@ -36,3 +41,5 @@
 <p><a href="#profile/me">See My Profile</a></p>
 
 <p><a href="#contacts/me">See My Contacts</a></p>
+
+</div>
